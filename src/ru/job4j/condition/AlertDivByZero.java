@@ -7,7 +7,6 @@ public class AlertDivByZero {
         possibleDiv(-5);
     }
 
-    @SuppressWarnings("checkstyle:EmptyBlock")
     public static void possibleDiv(int number) {
         if (number == 0) {
             System.out.println("Cloud not div by 0.");
