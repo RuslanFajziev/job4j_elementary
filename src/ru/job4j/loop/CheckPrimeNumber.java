@@ -5,7 +5,7 @@ public class CheckPrimeNumber {
         boolean prime = true;
         if (number == 1 || number == 2 || number == 3) {
             return prime;
-        } else if (number == 4) {
+        } else if (number == 4 || number == 9) {
             return false;
         }
         for (int n = 3; n < number; n++) {
