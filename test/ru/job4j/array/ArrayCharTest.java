@@ -17,16 +17,15 @@ public class ArrayCharTest {
     public void whenNotStartWithPrefixThenFalse() {
         char[] word = {'H', 'e', 'l', 'l', 'o'};
         char[] pref = {'H', 'i'};
-        boolean result =ArrayChar.startsWith(word, pref);
+        boolean result = ArrayChar.startsWith(word, pref);
         assertThat(result, is(false));
     }
-
 
     @Test
     public void whenNotStartWithPrefixThenFalse2() {
         char[] word = {'H', 'e', 'l', 'l', 'o'};
         char[] pref = {'H', 'o', 'l'};
-        boolean result =ArrayChar.startsWith(word, pref);
+        boolean result = ArrayChar.startsWith(word, pref);
         assertThat(result, is(false));
     }
 }
