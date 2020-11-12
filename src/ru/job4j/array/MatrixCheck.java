@@ -12,10 +12,30 @@ public class MatrixCheck {
                 if (board[i][j] != row) {
                     result = false;
                     break;
-                } else if (board[i][board[i].length - 1] == row && j == board[i].length - 1) {
+                } else if (board[i][j] == row && j == board[i].length - 1) {
                     result = true;
                     stop = true;
                 }
+            }
+        }
+        return result;
+    }
+
+    public static boolean monoVertical(char[][] board, int column) {
+        boolean result = true;
+        int j = 0;
+        for (int i = 0; i < board.length; i++) {
+            if (board[i][j] != column) {
+                result = false;
+                if (j < board[i].length) {
+                    j++;
+                }
+                if (board[i][j] != column && j == board[i].length - 1) {
+                    break;
+                }
+            } else if (board[i][j] == column && i == board.length - 1) {
+                result = true;
+                break;
             }
         }
         return result;
