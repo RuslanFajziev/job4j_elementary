@@ -11,9 +11,9 @@ public class MatrixCheckTest {
         char[][] input = {
                 {' ', ' ', ' '},
                 {'X', 'X', 'X'},
-                {' ', ' ', ' '}
+                {' ', ' ', ' '},
         };
-        boolean result = MatrixCheck.monoHorizontal(input, 'X');
+        boolean result = MatrixCheck.monoHorizontal(input, 1);
         assertThat(result, is(true));
     }
 
@@ -21,25 +21,11 @@ public class MatrixCheckTest {
     public void whenHasMonoHorizontal2() {
         char[][] input = {
                 {' ', ' ', ' '},
-                {' ', '5', ' '},
-                {' ', '5', '5'},
+                {'X', 'X', 'X'},
                 {' ', ' ', ' '}
         };
-        boolean result = MatrixCheck.monoHorizontal(input, '5');
+        boolean result = MatrixCheck.monoHorizontal(input, 2);
         assertThat(result, is(false));
-    }
-
-    @Test
-    public void whenHasMonoHorizontal3() {
-        char[][] input = {
-                {' ', ' ', ' '},
-                {' ', '5', ' '},
-                {' ', '6', '7'},
-                {'6', '6', '6'},
-                {'0', '0', '0'},
-        };
-        boolean result = MatrixCheck.monoHorizontal(input, '6');
-        assertThat(result, is(true));
     }
 
     @Test
@@ -49,29 +35,18 @@ public class MatrixCheckTest {
                 {' ', ' ', 'X'},
                 {' ', ' ', 'X'},
         };
-        boolean result = MatrixCheck.monoVertical(input, 'X');
+        boolean result = MatrixCheck.monoVertical(input, 2);
         assertThat(result, is(true));
     }
 
     @Test
     public void whenHasMonoVertical2() {
         char[][] input = {
-                {'0', 'Y', 'Y'},
-                {'5', 'Y', 'X'},
-                {'2', 'Y', 'X'},
+                {' ', 'X', 'X'},
+                {' ', 'X', 'X'},
+                {' ', 'X', 'X'},
         };
-        boolean result = MatrixCheck.monoVertical(input, 'Y');
+        boolean result = MatrixCheck.monoVertical(input, 1);
         assertThat(result, is(true));
-    }
-
-    @Test
-    public void whenHasMonoVertical3() {
-        char[][] input = {
-                {'0', 'Y', 'Y'},
-                {'5', 'Y', 'X'},
-                {'2', 'Y', 'X'},
-        };
-        boolean result = MatrixCheck.monoVertical(input, 'Z');
-        assertThat(result, is(false));
     }
 }
