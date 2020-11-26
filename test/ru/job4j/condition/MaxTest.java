@@ -25,4 +25,28 @@ public class MaxTest {
         int result = Max.max(5, 5);
         assertThat(result, is(5));
     }
+
+    @Test
+    public void test4() {
+        int result = Max.max(1, 200, 100);
+        assertThat(result, is(200));
+    }
+
+    @Test
+    public void test5() {
+        int result = Max.max(3, 2, 7);
+        assertThat(result, is(7));
+    }
+
+    @Test
+    public void test6() {
+        int result = Max.max(5, 500, 700, 2000);
+        assertThat(result, is(2000));
+    }
+
+    @Test
+    public void test7() {
+        int result = Max.max(7000, 500, 700, 2000);
+        assertThat(result, is(7000));
+    }
 }
